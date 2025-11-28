@@ -1,37 +1,34 @@
 # GlowCart → Full-Stack E-Commerce Platform
 
-A modern, responsive e-commerce web app built from scratch with the **MERN stack** (MongoDB, Express, React, Node.js).
+A modern, responsive e-commerce web app built from scratch with the **MERN stack**.
 
----
+### Current Status – Active Development (updated today!)
+- Clean MERN structure (`client/` + `server/`) → done
+- Express backend running on `localhost:5006` → done
+- MongoDB Atlas connection established via Mongoose → done
+- Daily commits with clear messages → ongoing!
 
-### Current Status
-- Project initialized with clean MERN folder structure
-- Backend + Frontend setup ready
-- Daily commits starting now → **in active development**
+### Next Up
+- Auth routes (register/login) + JWT + bcrypt
+- Product & Order models
+- Shopping cart logic
 
----
-
-### Features (Planned / In Progress)
-- User authentication (JWT + bcrypt)
-- Product catalog with search & filters
+### Planned Features
+- User authentication & protected routes
+- Product catalog with search & category filters
 - Shopping cart & wishlist
-- Secure checkout with Stripe
+- Secure Stripe checkout
 - Order history & tracking
-- Admin dashboard (manage products, users, orders)
-- Image upload (Cloudinary)
-- Responsive UI (mobile-first)
-
----
+- Admin dashboard
+- Image upload with Cloudinary
+- Fully responsive UI (mobile-first)
 
 ### Tech Stack
 - **Frontend**: React, Redux Toolkit, React Router, Bootstrap
-- **Backend**: Node.js, Express, MongoDB (Atlas), Mongoose
-- **Payments**: Stripe API
+- **Backend**: Node.js, Express, MongoDB Atlas, Mongoose
+- **Auth**: JWT + bcrypt
+- **Payments**: Stripe
 - **File Upload**: Multer + Cloudinary
-- **Auth**: JWT, bcrypt
-- **Deployment**: Vercel (frontend), Render (backend)
+- **Deployment**: Vercel (frontend) • Render (backend)
 
----
-
-> **Watch this repo** — new features and clean commits added daily!# glowcart
-Modern e-commerce platform built from scratch with MERN stack. Features: JWT + bcrypt auth, Redux Toolkit state management, MongoDB Atlas, Express backend, React frontend with responsive design, and Stripe payment processing.
+Watch this repo — new commits drop daily!
