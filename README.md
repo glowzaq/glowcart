@@ -6,12 +6,16 @@ A modern, responsive e-commerce web app built from scratch with the **MERN stack
 - Clean MERN structure (`client/` + `server/`) → done
 - Express backend running on `localhost:5006` → done
 - MongoDB Atlas connection established via Mongoose → done
+- Full JWT authentication system (register, login, logout) → done
+- Protected routes + custom auth middleware → done
+- Global error handler + async wrapper → done
+- bcrypt password hashing + proper validation → done
 - Daily commits with clear messages → ongoing!
 
 ### Next Up
-- Auth routes (register/login) + JWT + bcrypt
-- Product & Order models
 - Shopping cart logic
+- Product & Category models + CRUD
+- Cloudinary image upload
 
 ### Planned Features
 - User authentication & protected routes
