@@ -10,6 +10,7 @@ A modern, responsive e-commerce web app built from scratch with the **MERN stack
 - Protected routes + custom auth middleware → done
 - Global error handler + async wrapper → done
 - bcrypt password hashing + proper validation → done
+- Frontend authentication implemented with React, Formik, and Yup (register and login flows connected to backend API) → done
 - Daily commits with clear messages → ongoing!
 
 ### Next Up
