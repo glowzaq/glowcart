@@ -1,10 +1,13 @@
 import express from 'express';
 import authMiddleware from '../middleware/authMiddleware.js';
+import { getProtected } from '../controllers/protectedController.js';
 
 const router = express.Router();
 
-router.get('/protected', authMiddleware, (req, res) => {
-    res.status(200).json({ message: 'You have accessed a protected route', user: req.user });
-});
+router.get(
+    '/protected',
+    authMiddleware,
+    getProtected
+);
 
 export default router;

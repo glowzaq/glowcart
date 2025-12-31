@@ -14,8 +14,15 @@ const register = async(req, res)=>{
         if(!validator.isEmail(email)){
             return res.status(400).json({message: 'Invalid email address'})
         }
-        if(password.length < 8){
-            return res.status(400).json({message: 'Password must be at least 8 characters long'})
+        
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+        if (!passwordRegex.test(password)) {
+            return res.status(400).json({
+                message: "Password must contain uppercase, lowercase, number, and special character"
+            });
+        }
+        if (password.length < 8) {
+            return res.status(400).json({ message: "Password must be at least 8 characters long" });
         }
 
         const existingUser = await User.findOne({email})
