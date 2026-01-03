@@ -1,14 +1,14 @@
 import bcrypt from 'bcryptjs'
 import validator from 'validator'
 import User from '../models/userModel.js'
-import generateToken from '../utils/token.js'
+import generateToken from '../utils/token.js' 
 
 const register = async(req, res)=>{
     try {
-        const {fullname, email, password} = req.body
+        const {fullname, email, password, role} = req.body
 
         // Validate input fields
-        if(!fullname || !email || !password){
+        if(!fullname || !email || !password || !role){
             return res.status(400).json({message: 'All fields are required'})
         }
         if(!validator.isEmail(email)){
@@ -32,10 +32,16 @@ const register = async(req, res)=>{
             const salt = await bcrypt.genSalt(10)
             const hashedPassword = await bcrypt.hash(password, salt)
 
+            const allowedRoles = ["customer", "seller"]
+            const userRole = allowedRoles.includes(role)
+            ? role
+            : "customer"
+
             const newUser = await User.create({
                 fullname,
                 email,
-                password: hashedPassword
+                password: hashedPassword,
+                role: userRole
             })
 
             const savedUser = await newUser.save()
